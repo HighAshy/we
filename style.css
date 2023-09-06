@@ -1,0 +1,53 @@
+body{
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+
+.swing{
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  box-shadow: 5px 5px 10px #000000;
+}
+
+
+.swing::after{
+  content:'';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1pc solid #000000;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);  
+}
+
+.swing::after{
+  content:'';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 55%;
+  z-index: 5;
+  border-radius: 50% 50%;
+  background: #000000;  
+}
+
+
+@keyframes swing{
+  0%{
+    transform: rotate(4deg);
+  }
+  100%{
+    transform: rotate(-4deg);
+    
+  }
+}
